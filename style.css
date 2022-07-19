@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Lobster&display=swap');
+
+/* Interface Général */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(254, 249, 249);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    content: "";
+    clear: both;
+}
+
+.joueurs {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 0px 10px 50px black;
+    overflow: hidden;
+}
+
+.joueur-1, .joueur-2 {
+    width: 50%;
+    float: left;
+    height: 600px;
+    padding: 100px;
+}
+
+
+/* Interface joueur */
+
+.nom-du-joueur {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.score-final {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
+
+.resultat {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
+
+.resultat-en-cours {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.score-resultat {
+    font-size: 30px;
+}
+
+/* Boutons et dé */
+
+
+bouton {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+bouton:hover { font-weight: 600; }
+bouton:hover { margin-right: 20px; }
+
+bouton:focus {
+    outline: none;
+}
+
+.btn-nouvelle-partie {
+    top: 45px;
+    text-align: center;
+}
+.btn-lancer { 
+    top: 403px;
+    text-align: center ;
+}
+.btn-garder { 
+    top: 467px;
+    text-align: center;
+}
+
+.dé {
+    position: absolute;
+    left: 50%;
+    top: 178px;
+    transform: translateX(-50%);
+    height: 100px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
