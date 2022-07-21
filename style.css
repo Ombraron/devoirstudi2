@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: rgb(254, 249, 249);
+    background-color: rgb(8, 0, 0);
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     position: relative;
@@ -59,6 +59,19 @@ body {
     margin-bottom: 130px;
 }
 
+.actif { background-color: #f7f7f7; }
+.actif .nom-du-joueur { font-weight: 300; }
+
+.actif .nom-du-joueur::after {
+    content: "\2022";
+    font-size: 47px;
+    position: absolute;
+    color: #EB4D4D;
+    top: -7px;
+    right: 10px;
+    
+}
+
 .resultat {
     background-color: #EB4D4D;
     color: #fff;
@@ -72,7 +85,7 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 12px;
-    color: #222;
+    color: #fff;
 }
 
 .score-resultat {
@@ -106,23 +119,40 @@ bouton:focus {
 }
 
 .btn-nouvelle-partie {
-    top: 45px;
+    top: 130px;
     text-align: center;
+    background-color: #EB4D4D;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+
 }
 .btn-lancer { 
-    top: 403px;
+    top: 420px;
     text-align: center ;
+    background-color: #EB4D4D;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 .btn-garder { 
-    top: 467px;
+    top: 490px;
     text-align: center;
+    background-color: #EB4D4D;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .dé {
     position: absolute;
     left: 50%;
-    top: 178px;
+    top: 250px;
     transform: translateX(-50%);
     height: 100px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
+
+.gagnant { background-color: #f7f7f7; }
+.gagnant .nom-du-joueur { font-weight: 300; color: #EB4D4D; }
