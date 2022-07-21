@@ -142,7 +142,7 @@ i {
     text-align: center;   
 }
 
-.dé {
+.dice {
     position: absolute;
     left: 50%;
     top: 250px;
@@ -151,5 +151,5 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.gagnant { background-color: #f7f7f7; }
-.gagnant .nom-du-joueur { font-weight: 300; color: #EB4D4D; }
+.vainqueur { background-color: #f7f7f7; }
+.vainqueur .nom-du-joueur { font-weight: 300; color: #EB4D4D; }
