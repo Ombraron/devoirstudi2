@@ -83,8 +83,8 @@ function init() {
     document.getElementById('score-1').textContent = '0';
     document.getElementById('current-0').textContent = '0';
     document.getElementById('current-1').textContent = '0';
-    document.getElementById('nom-0').textContent = 'Joueur 1';
-    document.getElementById('nom-1').textContent = 'Joueur 2';
+    document.getElementById('name-0').textContent = 'Joueur 1';
+    document.getElementById('name-1').textContent = 'Joueur 2';
     document.querySelector('.player-0-panel').classList.remove('winner');
     document.querySelector('.player-1-panel').classList.remove('winner');
     document.querySelector('.player-0-panel').classList.remove('active');

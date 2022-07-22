@@ -72,7 +72,7 @@ body {
     
 }
 
-.player-current-label {
+.player-current-box {
     background-color: #EB4D4D;
     color: #fff;
     width: 60%;
@@ -81,7 +81,7 @@ body {
     text-align: center;
 }
 
-.resultat-en-cours {
+.player-current-label {
     text-transform: uppercase;
     margin-bottom: 10px;
     font-size: 19px;
