@@ -14,20 +14,25 @@ Le premier joueur qui atteint les 100 points sur global gagne le jeu.
 let globalScore, roundScore, activePlayer, gamePlaying;
 
 init()
-// Lancement du dé
+
+// déroulement du tour de jeux
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
    if (gamePlaying) {
+        // lancement du dé, nombre aléatoire
         let dice = Math.floor(Math.random() * 6) + 1;
-    
+
+        // résultat
         let diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
         diceDOM.src = '/img/dice-' + dice + '.png';
 
+        // rajouter le chiffre au score temporaire si le dé /= 1
         if (dice !== 1) {
             roundScore += dice;
             document.querySelector('#current-' + activePlayer).textContent = roundScore;
         } else {
+            // fin du tour joueur si dé = 1
             nextPlayer();
         }    
     }
@@ -36,7 +41,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 
 });
 
-
+// Ajout du score temporaire au score final et déclaration de la victoire si le score final >= 100
 document.querySelector('.btn-hold').addEventListener('click', function() {
     if (gamePlaying) {
         globalScore[activePlayer] += roundScore;
@@ -49,12 +54,13 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
             document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
             gamePlaying = false;
         } else {
+            // fin du dtour du joueur si score final < 100
             nextPlayer()
         }
     }
 });
 
-
+// fonction qui active le tour du prochain joueur
 function nextPlayer() {
     
  activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
@@ -66,10 +72,12 @@ function nextPlayer() {
     document.querySelector('.player-0-panel').classList.toggle('active');
     document.querySelector('.player-1-panel').classList.toggle('active');
 
-    document.querySelector('.dice').style.display = 'none';
+    
 }
 
+// début de partie
 document.querySelector('.btn-new').addEventListener('click', init);
+
 
 function init() {
     globalScore = [0, 0];
