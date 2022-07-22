@@ -19,7 +19,7 @@ body {
     clear: both;
 }
 
-.joueurs {
+.interface {
     width: 1000px;
     position: absolute;
     top: 50%;
@@ -30,7 +30,7 @@ body {
     overflow: hidden;
 }
 
-.joueur-1, .joueur-2 {
+.player-0-panel, .player-1-panel {
     width: 50%;
     float: left;
     height: 600px;
@@ -40,7 +40,7 @@ body {
 
 /* Interface joueur */
 
-.nom-du-joueur {
+.player-name {
     font-size: 40px;
     text-align: center;
     text-transform: uppercase;
@@ -51,7 +51,7 @@ body {
     position: relative;
 }
 
-.score-final {
+.player-score {
     text-align: center;
     font-size: 80px;
     font-weight: 100;
@@ -59,10 +59,10 @@ body {
     margin-bottom: 130px;
 }
 
-.actif { background-color: #f7f7f7; }
-.actif .nom-du-joueur { font-weight: 300; }
+.active { background-color: #f7f7f7; }
+.actif .player-name { font-weight: 300; }
 
-.actif .nom-du-joueur::after {
+.actif .player-name::after {
     content: "\2022";
     font-size: 47px;
     position: absolute;
@@ -72,7 +72,7 @@ body {
     
 }
 
-.resultat {
+.player-current-label {
     background-color: #EB4D4D;
     color: #fff;
     width: 60%;
@@ -88,7 +88,7 @@ body {
     color: #fff;
 }
 
-.score-resultat {
+.player-current-score {
     font-size: 30px;
 }
 
@@ -129,15 +129,15 @@ i {
     transition: margin 0.3s;
 }
 
-.btn-nouvelle-partie {
+.btn-new {
     top: 130px;
     text-align: center;
 }
-.btn-lancer { 
+.btn-roll { 
     top: 420px;
     text-align: center;
 }   
-.btn-garder { 
+.btn-hold { 
     top: 490px;
     text-align: center;   
 }
@@ -151,5 +151,5 @@ i {
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
-.vainqueur { background-color: #f7f7f7; }
-.vainqueur .nom-du-joueur { font-weight: 300; color: #EB4D4D; }
+.winner { background-color: #f7f7f7; }
+.winner .player-name { font-weight: 300; color: #EB4D4D; }
