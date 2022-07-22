@@ -25,7 +25,7 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
         // résultat
         let diceDOM = document.querySelector('.dice');
         diceDOM.style.display = 'block';
-        diceDOM.src = 'https://github.com/Ombraron/devoirstudi2/blob/master/img/dice-' + dice + '.png';
+        diceDOM.src = '/img/dice-' + dice + '.png';
 
         // rajouter le chiffre au score temporaire si le dé /= 1
         if (dice !== 1) {
